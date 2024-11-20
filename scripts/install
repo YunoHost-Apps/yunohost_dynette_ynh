@@ -36,6 +36,7 @@ popd > /dev/null
 
 ynh_config_add --template="config.yml" --destination="$install_dir/dynette/config.yml"
 ynh_config_add --template="gunicorn.py" --destination="$install_dir/dynette/gunicorn.py"
+ynh_config_add --template="cron" --destination="/etc/cron.d/$app"
 
 #=================================================
 # NAMED CONFIGURATION
