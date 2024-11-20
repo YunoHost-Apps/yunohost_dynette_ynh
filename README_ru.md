@@ -16,7 +16,7 @@
 
 ## Обзор
 
-
+YunoHost DynDNS Server.
 
 **Поставляемая версия:** 2.0~ynh1
 

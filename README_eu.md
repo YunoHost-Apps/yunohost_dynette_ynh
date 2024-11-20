@@ -16,7 +16,7 @@ EZ editatu eskuz.
 
 ## Aurreikuspena
 
-
+YunoHost DynDNS Server.
 
 **Paketatutako bertsioa:** 2.0~ynh1
 

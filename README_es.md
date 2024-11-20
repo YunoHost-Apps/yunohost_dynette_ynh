@@ -16,7 +16,7 @@ No se debe editar a mano.
 
 ## Descripción general
 
-
+YunoHost DynDNS Server.
 
 **Versión actual:** 2.0~ynh1
 

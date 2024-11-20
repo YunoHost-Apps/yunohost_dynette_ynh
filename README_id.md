@@ -16,7 +16,7 @@ Ini TIDAK boleh diedit dengan tangan.
 
 ## Ringkasan
 
-
+YunoHost DynDNS Server.
 
 **Versi terkirim:** 2.0~ynh1
 
