@@ -16,7 +16,7 @@
 
 ## 概况
 
-
+YunoHost DynDNS Server.
 
 **分发版本：** 2.0~ynh1
 
