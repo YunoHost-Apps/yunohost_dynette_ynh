@@ -34,6 +34,7 @@ ynh_backup "/etc/systemd/system/$app-regen-named-conf.service"
 ynh_backup "/etc/systemd/system/$app.service"
 
 ynh_backup "/etc/yunohost/hooks.d/post_iptable_rules/$app-named"
+ynh_backup "/etc/cron.d/$app"
 
 ynh_backup "/etc/logrotate.d/$app"
 
