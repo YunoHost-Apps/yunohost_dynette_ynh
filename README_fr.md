@@ -16,7 +16,7 @@ Il NE doit PAS être modifié à la main.
 
 ## Vue d’ensemble
 
-Le serveur DynDns de Yunohost
+YunoHost DynDNS Server.
 
 **Version incluse :** 2.0~ynh1
 
