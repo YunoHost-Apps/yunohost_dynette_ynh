@@ -8,7 +8,7 @@ name = "Dynette"
 description.en = "YunoHost DynDNS server"
 description.fr = "Serveur DynDns de YunoHost"
 
-version = "2.0~ynh3"
+version = "2.0~ynh4"
 
 maintainers = []
 
