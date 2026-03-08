@@ -8,7 +8,7 @@ It shall NOT be edited by hand.
   Dynette, packaged for YunoHost
 </h1>
 
-The YunoHost DynDNS server
+YunoHost DynDNS server
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://yunohost.org)
 [![App Demo](https://img.shields.io/badge/App_Demo-blue?style=for-the-badge)](https://dyndns.yunohost.org)
