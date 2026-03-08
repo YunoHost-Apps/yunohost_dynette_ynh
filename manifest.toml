@@ -66,6 +66,7 @@ ram.runtime = "50M"
     [resources.ports]
     main.exposed = false
     named.default = 1053
+    named.exposed = true
 
     [resources.apt]
     packages = [
