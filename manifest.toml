@@ -58,7 +58,6 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.data_dir]
-    dir = "/var/lib/__APP__"
     subdirs = ["db"]
 
     [resources.permissions]
