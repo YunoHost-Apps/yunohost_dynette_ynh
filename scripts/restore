@@ -13,6 +13,8 @@ chown -R "$app:$app" "$install_dir"
 
 mv "/etc/bind/named.conf.options" "/etc/bind/named.conf.options.orig"
 ynh_restore "/etc/bind/named.conf.options"
+chown -R "bind:bind" "/etc/bind/named.conf.options"
+chmod ug+rwX "/etc/bind/named.conf.options"
 
 #=================================================
 # RESTORE THE DATA DIRS
