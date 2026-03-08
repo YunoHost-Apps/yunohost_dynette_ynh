@@ -15,13 +15,15 @@ ynh_config_remove_systemd
 ynh_safe_rm "$dynette_regen_named_conf_path"
 ynh_config_remove_systemd "$app-regen-named-conf"
 
-ynh_safe_rm "/etc/yunohost/hooks.d/post_iptable_rules/$app-named"
+ynh_safe_rm "/etc/nftables.d/${app}.conf"
 
 ynh_config_remove_logrotate
 
 ynh_config_remove_nginx
 
 _rm_config_named
+
+ynh_systemctl --service="nftables" --action="restart"
 
 #=================================================
 # END OF SCRIPT
