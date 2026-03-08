@@ -24,10 +24,8 @@ chown -R "$app:$app" "$install_dir"
 ynh_script_progression "Upgrading app..."
 
 pushd "$install_dir" > /dev/null
-
-_update_venv
-ynh_exec_as_app "$install_dir/venv/bin/pip" install -r dynette/requirements.txt > /dev/null
-
+    _update_venv
+    ynh_exec_as_app "$install_dir/venv/bin/pip" install -e dynette > /dev/null
 popd > /dev/null
 
 ynh_config_add --template="config.yml" --destination="$install_dir/dynette/config.yml"
