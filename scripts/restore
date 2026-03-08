@@ -31,10 +31,11 @@ ynh_script_progression "Restoring system configurations related to $app..."
 
 ynh_restore "/etc/nginx/conf.d/$domain.d/$app.conf"
 
-ynh_restore "$dynette_regen_named_conf_path"
+ynh_restore "/etc/systemd/system/$app-regen-named-conf.path"
 ynh_restore "/etc/systemd/system/$app-regen-named-conf.service"
 ynh_restore "/etc/systemd/system/$app.service"
 systemctl enable "$app.service" --quiet
+systemctl enable "$app-regen-named-conf.path" --quiet
 
 yunohost service add "$app" --description="Dynette gunicorn daemon" --log="/var/log/$app/$app.log"
 
@@ -55,6 +56,7 @@ ynh_script_progression "Reloading NGINX web server and $app's service..."
 
 ynh_systemctl --service="named" --action="start"
 ynh_systemctl --service="$app" --action="start"
+systemctl start "$app-regen-named-conf.path"
 
 ynh_systemctl --service=nginx --action=reload
 ynh_systemctl --service="nftables" --action="restart"

@@ -11,9 +11,10 @@ ynh_script_progression "Removing system configurations related to $app..."
 if ynh_hide_warnings yunohost service status "$app" >/dev/null; then
     yunohost service remove "$app"
 fi
-ynh_config_remove_systemd
-ynh_safe_rm "$dynette_regen_named_conf_path"
+
+ynh_safe_rm "/etc/systemd/system/$app-regen-named-conf.path"
 ynh_config_remove_systemd "$app-regen-named-conf"
+ynh_config_remove_systemd
 
 ynh_safe_rm "/etc/nftables.d/${app}.conf"
 
