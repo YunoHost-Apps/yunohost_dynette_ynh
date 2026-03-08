@@ -24,6 +24,9 @@ ynh_restore "$data_dir"
 ynh_restore "/var/lib/bind"
 ynh_restore "/var/cache/bind"
 
+chown -R "bind:bind" "/var/lib/bind" "/var/cache/bind"
+chmod ug+rwX "/var/lib/bind" "/var/cache/bind"
+
 #=================================================
 # RESTORE SYSTEM CONFIGURATIONS
 #=================================================
