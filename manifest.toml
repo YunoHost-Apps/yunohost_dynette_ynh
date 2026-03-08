@@ -5,8 +5,8 @@ packaging_format = 2
 id = "dynette"
 name = "Dynette"
 
-description.en = "The YunoHost DynDNS server"
-description.fr = "Le serveur DynDns de Yunohost"
+description.en = "YunoHost DynDNS server"
+description.fr = "Serveur DynDns de YunoHost"
 
 version = "2.0~ynh1"
 
