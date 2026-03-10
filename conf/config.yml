@@ -1,5 +1,18 @@
-DOMAINS: [__SUBDOMAINS__]
-DB_FOLDER: __DATA_DIR__/db/
+# list of the top-level domains to manage
+tlds: [__SUBDOMAINS__]
 
-# Those apps don't have rate limits
-LIMIT_EXEMPTED_IPS: []
+# list of IP addresses that can spam dynette
+limit_exempted_ips: []
+
+# Path to the SQlite database
+database: __DATA_DIR__/domains.sql
+
+# Path to the legacy database (only for migration)
+legacy_db_folder: /var/dynette/db/
+
+bind:
+  config_dir: /etc/bind
+  database_dir: /var/lib/bind
+
+# Enable testing configuration
+# testing: true
