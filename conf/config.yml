@@ -13,6 +13,7 @@ legacy_db_folder: /var/dynette/db/
 bind:
   config_dir: /etc/bind
   database_dir: /var/lib/bind
+  dnstap_socket: /run/named/__APP__-dnstap.socket
 
 # Enable testing configuration
 # testing: true

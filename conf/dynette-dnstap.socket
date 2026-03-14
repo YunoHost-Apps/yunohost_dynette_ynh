@@ -1,0 +1,12 @@
+[Unit]
+Description=Dynette DNSTap socket
+Before=named.service
+
+[Socket]
+ListenStream=/run/named/__APP__-dnstap.socket
+SocketUser=__APP__
+SocketGroup=bind
+SocketMode=0660
+
+[Install]
+WantedBy=__APP__-dnstap.service named.service

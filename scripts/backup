@@ -26,6 +26,8 @@ ynh_backup "/etc/nginx/conf.d/$domain.d/$app.conf"
 ynh_backup "/etc/systemd/system/$app.service"
 ynh_backup "/etc/systemd/system/$app-regen-named-conf.service"
 ynh_backup "/etc/systemd/system/$app-regen-named-conf.path"
+ynh_backup "/etc/systemd/system/$app-dnstap.service"
+ynh_backup "/etc/systemd/system/$app-dnstap.socket"
 
 ynh_backup "/etc/nftables.d/${app}.conf"
 

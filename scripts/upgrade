@@ -46,9 +46,14 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 ynh_config_add_nginx
 
 ynh_config_add_systemd
+
 ynh_config_add_systemd --template="dynette-regen-named-conf.service" --service="$app-regen-named-conf"
 ynh_config_add --template="dynette-regen-named-conf.path" --destination="/etc/systemd/system/$app-regen-named-conf.path"
 systemctl enable "$app-regen-named-conf.path" --quiet
+
+ynh_config_add_systemd --template="dynette-dnstap.service" --service="$app-dnstap"
+ynh_config_add --template="dynette-dnstap.socket" --destination="/etc/systemd/system/$app-dnstap.socket"
+systemctl enable "$app-dnstap.socket" --quiet
 
 ynh_safe_rm "/etc/yunohost/hooks.d/post_iptable_rules/$app-named"
 ynh_config_add --template="nftables.conf" --destination="/etc/nftables.d/${app}.conf"
@@ -64,6 +69,7 @@ ynh_script_progression "Starting $app's systemd service..."
 ynh_systemctl --service="named" --action="start"
 ynh_systemctl --service="$app" --action="start" --log_path="/var/log/$app/$app.log"
 systemctl start "$app-regen-named-conf.path"
+systemctl start "$app-dnstap.socket"
 
 ynh_systemctl --service="nftables" --action="restart"
 

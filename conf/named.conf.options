@@ -26,6 +26,6 @@ options {
         listen-on-v6 port __PORT_NAMED__ { any; };
 
         dnstap { all; };
-        dnstap-output unix "/var/run/named/dnstap.sock";
+        dnstap-output unix "/run/named/__APP__-dnstap.socket";
         dnstap-identity "ns0";
 };
