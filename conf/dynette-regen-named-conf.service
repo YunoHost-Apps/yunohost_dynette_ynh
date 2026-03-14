@@ -15,8 +15,8 @@ StandardOutput=append:/var/log/__APP__/__APP__-regen-named-conf.log
 StandardError=inherit
 
 # Workaround for systemd.path PathModified, see https://serverfault.com/a/1175113
-ExecStartPre=touch __DATA_DIR__/__APP__-regen-named-conf.flag
-ExecStopPost=bash -c 'if [ __DATA_DIR__/domains.sql -nt __DATA_DIR__/__APP__-regen-named-conf.flag ]; then systemctl --no-block restart __APP__-regen-named-conf.service; fi'
+; ExecStartPre=touch __DATA_DIR__/__APP__-regen-named-conf.flag
+; ExecStopPost=bash -c 'if [ __DATA_DIR__/domains.sql -nt __DATA_DIR__/__APP__-regen-named-conf.flag ]; then systemctl --no-block restart __APP__-regen-named-conf.service; fi'
 
 [Install]
 WantedBy=multi-user.target
