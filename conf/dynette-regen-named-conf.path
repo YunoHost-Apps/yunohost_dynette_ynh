@@ -1,6 +1,6 @@
 [Path]
 Unit=__APP__-regen-named-conf.service
-PathModified=__DATA_DIR__/domains.sql
+PathModified=__DATA_DIR__/domains.sql.flag
 
 [Install]
 WantedBy=multi-user.target
