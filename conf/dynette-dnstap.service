@@ -9,6 +9,7 @@ User=__APP__
 Group=__APP__
 
 WorkingDirectory=__INSTALL_DIR__
+Environment=PYTHONUNBUFFERED=1
 ExecStart=__INSTALL_DIR__/venv/bin/dnstap_monitor
 StandardOutput=append:/var/log/__APP__/__APP__-dnstap-monitor.log
 StandardError=inherit
