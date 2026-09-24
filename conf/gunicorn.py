@@ -7,5 +7,5 @@ pid = "/run/gunicorn/__APP__-pid"
 errorlog = "/var/log/__APP__/error.log"
 accesslog = "/var/log/__APP__/access.log"
 access_log_format = '%({X-Real-IP}i)s %({X-Forwarded-For}i)s %(h)s %(l)s %(u)s %(t)s "%(r)s" %(s)s %(b)s "%(f)s" "%(a)s"'
-loglevel = "warning"
+loglevel = "info"
 capture_output = True
